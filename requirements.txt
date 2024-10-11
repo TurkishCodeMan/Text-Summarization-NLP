@@ -1,0 +1,20 @@
+transformers  # Doğal dil işleme için önceden eğitilmiş modeller sunar.
+transformers[sentencepiece]  # SentencePiece ile tokenizasyon desteği sağlar.
+datasets  # Veri setlerini kolayca yüklemek ve yönetmek için kullanılır.
+sacrebleu  # Çeviri kalitesini değerlendirmek için BLEU skoru hesaplar.
+rouge-score  # Metin özetleme ve karşılaştırma için ROUGE metriklerini sağlar.
+py7zr # 7zip dosyalarını işlemek için kullanılır.
+pandas # Veri analizi ve işleme için kullanılır.
+tqdm # İşlem ilerlemesini görselleştirmek için kullanılır.
+PyYAML # YAML dosyalarını işlemek için kullanılır.
+matplotlib # Veri görselleştirme için kullanılır.
+torch # Derin öğrenme için kullanılır.
+notebook # Jupyter Notebook için kullanılır.
+boto3 # AWS ile çalışmak için kullanılır.
+mypy-boto3-s3 # Boto3 ile S3 işlemleri için mypy desteği sağlar.
+python-box==6.0.2 # Python objelerini JSON veya YAML formatına dönüştürmek için kullanılır.
+ensure==1.0.2 # Python paketlerinin uyumluluğunu kontrol etmek için kullanılır.
+fastapi==0.78.0 # ASGI uygulamaları oluşturmak için kullanılır.
+uvicorn==0.18.3 # ASGI sunucusunu başlatmak için kullanılır.
+Jinja2==3.1.2 # HTML şablonlarını işlemek için kullanılır.
+-e .
