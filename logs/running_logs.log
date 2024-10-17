@@ -1,0 +1,77 @@
+[2024-10-11 21:54:02,977: INFO: main] Welcome to text summarization!
+[2024-10-12 21:40:40,084: INFO: main] Welcome to text summarization!
+[2024-10-17 20:15:52,808: INFO: common] Successfully read YAML file from config/config.yaml
+[2024-10-17 20:15:52,809: INFO: common] Successfully read YAML file from params.yaml
+[2024-10-17 20:15:52,810: INFO: common] Created directory: artifacts
+[2024-10-17 20:15:52,810: INFO: common] Created directory: artifacts/data_ingestion
+[2024-10-17 20:16:38,862: INFO: common] Successfully read YAML file from config/config.yaml
+[2024-10-17 20:16:38,864: INFO: common] Successfully read YAML file from params.yaml
+[2024-10-17 20:16:38,865: INFO: common] Created directory: artifacts
+[2024-10-17 20:16:38,866: INFO: common] Created directory: artifacts/data_ingestion
+[2024-10-17 20:16:48,258: INFO: 3158102211] artifacts/data_ingestion/data.zip download completed with following info:
+Connection: close
+Content-Length: 8269699
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "71e583e8890c3fcffab33fb23a2388dcf72f5c561b5f2f8adca1842301476a15"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: CE3F:3978D4:2E39B58:303CCD1:67114678
+Accept-Ranges: bytes
+Date: Thu, 17 Oct 2024 17:16:40 GMT
+Via: 1.1 varnish
+X-Served-By: cache-mxp6952-MXP
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1729185400.094926,VS0,VE491
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: ec415531e169fbaa3b04f48a17e2a601f6f76c80
+Expires: Thu, 17 Oct 2024 17:21:40 GMT
+Source-Age: 0
+
+
+[2024-10-17 20:35:21,223: INFO: main] Starting Data Ingestipn Stage...
+[2024-10-17 20:35:21,224: INFO: common] Successfully read YAML file from config/config.yaml
+[2024-10-17 20:35:21,224: INFO: common] Successfully read YAML file from params.yaml
+[2024-10-17 20:35:21,224: INFO: common] Created directory: artifacts
+[2024-10-17 20:35:21,224: INFO: common] Created directory: artifacts/data_ingestion
+[2024-10-17 20:35:39,778: INFO: data_ingestion] artifacts/data_ingestion/data.zip download completed with following info:
+Connection: close
+Content-Length: 8269699
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "71e583e8890c3fcffab33fb23a2388dcf72f5c561b5f2f8adca1842301476a15"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 6614:0DB4:C3B2FE:CC4A20:67114ADA
+Accept-Ranges: bytes
+Date: Thu, 17 Oct 2024 17:35:24 GMT
+Via: 1.1 varnish
+X-Served-By: cache-vie6380-VIE
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1729186523.716477,VS0,VE1674
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 218d05aa71ec3ac52f497f69a8cd95cbd6816c07
+Expires: Thu, 17 Oct 2024 17:40:24 GMT
+Source-Age: 1
+
+
+[2024-10-17 20:35:39,936: INFO: main] Data Ingestipn Stage completed successfully.
+[2024-10-17 21:07:30,174: INFO: main Starting Data Ingestipn Stage...
+[2024-10-17 21:07:30,175: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-17 21:07:30,175: INFO: common Successfully read YAML file from params.yaml
+[2024-10-17 21:07:30,175: INFO: common Created directory: artifacts
+[2024-10-17 21:07:30,175: INFO: common Created directory: artifacts/data_ingestion
+[2024-10-17 21:07:30,175: INFO: data_ingestion File already exists with size: 8076 KB
+[2024-10-17 21:07:30,338: INFO: main Data Ingestipn Stage completed successfully.

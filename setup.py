@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Text-Summarization-NLP"
 AUTHOR_USER_NAME = "TurkishCodeMan"
-SRC_REPO = "end-to-end-nlp"
+SRC_REPO = "textSummarizer"
 AUTHOR_EMAIL = "huseyinaltikulac4@gmail.com"
 
 setuptools.setup(

@@ -5,7 +5,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-project_name = "text-summarization"
+project_name = "textSummarizer"
 
 list_of_files = [
     ".github/workflows/.gitkeep",
@@ -26,8 +26,10 @@ list_of_files = [
     "Dockerfile",
     "requirements.txt",
     "setup.py",
-    "research/trials.ipynb"
-    
+    "research/trials.ipynb",
+    "tests/test_utils.py",
+    "tests/test_pipeline.py"
+
 ]
 
 for filepath in list_of_files:
