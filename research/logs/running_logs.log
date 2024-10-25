@@ -1,0 +1,4 @@
+[2024-10-25 19:33:21,093: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 19:33:21,094: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 19:33:21,094: INFO: common Created directory: artifacts
+[2024-10-25 19:33:21,094: INFO: common Created directory: artifacts/data_validation

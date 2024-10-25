@@ -75,3 +75,100 @@ Source-Age: 1
 [2024-10-17 21:07:30,175: INFO: common Created directory: artifacts/data_ingestion
 [2024-10-17 21:07:30,175: INFO: data_ingestion File already exists with size: 8076 KB
 [2024-10-17 21:07:30,338: INFO: main Data Ingestipn Stage completed successfully.
+[2024-10-17 21:16:04,793: INFO: main Starting Data Ingestipn Stage...
+[2024-10-17 21:16:04,794: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-17 21:16:04,794: INFO: common Successfully read YAML file from params.yaml
+[2024-10-17 21:16:04,794: INFO: common Created directory: artifacts
+[2024-10-17 21:16:04,794: INFO: common Created directory: artifacts/data_ingestion
+[2024-10-17 21:16:04,794: INFO: data_ingestion File already exists with size: 8076 KB
+[2024-10-17 21:16:04,985: INFO: main Data Ingestipn Stage completed successfully.
+[2024-10-25 18:45:09,728: INFO: main Starting Data Ingestipn Stage...
+[2024-10-25 18:45:09,730: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 18:45:09,730: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 18:45:09,730: INFO: common Created directory: artifacts
+[2024-10-25 18:45:09,730: INFO: common Created directory: artifacts/data_ingestion
+[2024-10-25 18:45:09,730: INFO: data_ingestion File already exists with size: 8076 KB
+[2024-10-25 18:45:09,851: INFO: main Data Ingestipn Stage completed successfully.
+[2024-10-25 19:29:33,838: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 19:29:33,840: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 19:29:33,841: INFO: common Created directory: artifacts
+[2024-10-25 19:29:33,842: INFO: common Created directory: artifacts/data_ingestion
+[2024-10-25 19:29:33,842: INFO: 3158102211 File already exists with size: 8076 KB
+[2024-10-25 19:30:34,677: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 19:30:34,678: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 19:30:34,679: INFO: common Created directory: artifacts
+[2024-10-25 19:30:34,680: INFO: common Created directory: artifacts/data_ingestion
+[2024-10-25 19:32:11,633: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 19:32:11,635: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 19:32:11,636: INFO: common Created directory: artifacts
+[2024-10-25 19:32:11,637: INFO: common Created directory: artifacts/data_validation
+[2024-10-25 19:38:40,288: INFO: main Starting Data Validation Stage...
+[2024-10-25 19:38:40,289: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 19:38:40,289: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 19:38:40,290: INFO: common Created directory: artifacts
+[2024-10-25 19:38:40,290: INFO: common Created directory: artifacts/data_validation
+[2024-10-25 19:38:40,290: ERROR: main Data Validation Stage failed with error: 'DataValidation' object has no attribute 'all_files_exist'
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_ingestion.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_02_data_validation.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_02_data_validation.py", line 15, in main
+    data_validation.all_files_exist()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataValidation' object has no attribute 'all_files_exist'
+[2024-10-25 19:39:23,667: INFO: main Starting Data Validation Stage...
+[2024-10-25 19:39:23,668: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 19:39:23,669: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 19:39:23,669: INFO: common Created directory: artifacts
+[2024-10-25 19:39:23,669: INFO: common Created directory: artifacts/data_validation
+[2024-10-25 19:39:23,669: ERROR: main Data Validation Stage failed with error: 'DataValidation' object has no attribute 'all_files_exist'
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_02_data_validation.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_02_data_validation.py", line 15, in main
+    data_validation.all_files_exist()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataValidation' object has no attribute 'all_files_exist'. Did you mean: 'all_files_exists'?
+[2024-10-25 19:39:40,775: INFO: main Starting Data Validation Stage...
+[2024-10-25 19:39:40,776: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 19:39:40,776: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 19:39:40,776: INFO: common Created directory: artifacts
+[2024-10-25 19:39:40,776: INFO: common Created directory: artifacts/data_validation
+[2024-10-25 19:39:40,776: ERROR: main Data Validation Stage failed with error: 'DataValidation' object has no attribute 'all_files_exist'
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_02_data_validation.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_02_data_validation.py", line 15, in main
+    data_validation.all_files_exist()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataValidation' object has no attribute 'all_files_exist'. Did you mean: 'all_files_exists'?
+[2024-10-25 19:39:56,702: INFO: main Starting Data Validation Stage...
+[2024-10-25 19:39:56,703: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 19:39:56,703: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 19:39:56,703: INFO: common Created directory: artifacts
+[2024-10-25 19:39:56,703: INFO: common Created directory: artifacts/data_validation
+[2024-10-25 19:39:56,703: ERROR: main Data Validation Stage failed with error: [Errno 2] No such file or directory: 'artifacts/data_ingestion/samsum_dataset'
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_02_data_validation.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_02_data_validation.py", line 15, in main
+    data_validation.all_files_exist()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/components/data_validation.py", line 28, in all_files_exist
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/components/data_validation.py", line 12, in all_files_exist
+    all_files=os.listdir(os.path.join('artifacts','data_ingestion','samsum_dataset'))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/samsum_dataset'
+[2024-10-25 19:40:10,853: INFO: main Starting Data Validation Stage...
+[2024-10-25 19:40:10,853: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 19:40:10,854: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 19:40:10,854: INFO: common Created directory: artifacts
+[2024-10-25 19:40:10,854: INFO: common Created directory: artifacts/data_validation
+[2024-10-25 19:40:10,855: INFO: main Data Validation Stage completed successfully.
