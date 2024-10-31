@@ -9,8 +9,10 @@ class DataValidationTrainingPipeline:
     def main(self):
 
         try:
-            config = ConfigurationManager()
-            data_validation_config = config.get_data_validation_config()
+            config_manager = ConfigurationManager()
+            data_validation_config = config_manager.get_config('data_validation')
+
+            # data_validation_config = config.get_data_validation_config()
             data_validation = DataValidation(config=data_validation_config)
             data_validation.all_files_exist()
 

@@ -172,3 +172,1070 @@ FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestio
 [2024-10-25 19:40:10,854: INFO: common Created directory: artifacts
 [2024-10-25 19:40:10,854: INFO: common Created directory: artifacts/data_validation
 [2024-10-25 19:40:10,855: INFO: main Data Validation Stage completed successfully.
+[2024-10-25 19:52:37,377: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 19:52:37,379: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 19:52:37,380: INFO: common Created directory: artifacts
+[2024-10-25 19:52:37,381: INFO: common Created directory: artifacts/data_transformation
+[2024-10-25 19:53:01,372: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 19:53:20,513: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 19:53:20,701: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 19:53:20,705: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 19:53:20,707: INFO: common Created directory: artifacts
+[2024-10-25 19:53:20,708: INFO: common Created directory: artifacts/data_transformation
+[2024-10-25 19:57:39,851: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 19:57:39,989: INFO: main Starting Data Validation Stage...
+[2024-10-25 19:57:39,990: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 19:57:39,990: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 19:57:39,990: INFO: common Created directory: artifacts
+[2024-10-25 19:57:39,990: INFO: common Created directory: artifacts/data_transformation
+[2024-10-25 19:57:39,991: ERROR: main Data Validation Stage failed with error: DataTransformationConfig.__init__() got an unexpected keyword argument 'tokenizer_name'
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 13, in main
+    data_transformation_config = config.get_data_transformation_config()
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/config/configuration.py", line 63, in get_data_transformation_config
+    data_transformation_config = DataTransformationConfig(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DataTransformationConfig.__init__() got an unexpected keyword argument 'tokenizer_name'
+[2024-10-25 19:58:42,262: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 19:58:42,388: INFO: main Starting Data Validation Stage...
+[2024-10-25 19:58:42,389: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 19:58:42,390: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 19:58:42,390: INFO: common Created directory: artifacts
+[2024-10-25 19:58:42,390: INFO: common Created directory: artifacts/data_transformation
+[2024-10-25 19:58:43,201: ERROR: main Data Validation Stage failed with error: Directory artifacts/data_ingestion/samsum-dataset is neither a `Dataset` directory nor a `DatasetDict` directory.
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 15, in main
+    data_transformation.convert()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/components/data_transformation.py", line 24, in convert
+    dataset_samsum=load_from_disk(self.config.data_path)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/datasets/load.py", line 2160, in load_from_disk
+    raise FileNotFoundError(
+FileNotFoundError: Directory artifacts/data_ingestion/samsum-dataset is neither a `Dataset` directory nor a `DatasetDict` directory.
+[2024-10-25 20:02:16,968: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 20:02:17,096: INFO: main Starting Data Transformation Stage...
+[2024-10-25 20:02:17,097: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 20:02:17,098: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 20:02:17,098: INFO: common Created directory: artifacts
+[2024-10-25 20:02:17,098: ERROR: main Data Transformation Stage failed with error: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_01_data_ingestion.py", line 19, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_01_data_ingestion.py", line 13, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'. Did you mean: 'get_data_transformation_config'?
+[2024-10-25 20:06:44,792: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 20:06:44,933: INFO: main Starting Data Ingestion Stage...
+[2024-10-25 20:06:44,934: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 20:06:44,934: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 20:06:44,934: INFO: common Created directory: artifacts
+[2024-10-25 20:06:44,934: ERROR: main Data Ingestion Stage failed with error: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_01_data_ingestion.py", line 19, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_01_data_ingestion.py", line 13, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'. Did you mean: 'get_data_transformation_config'?
+[2024-10-25 20:08:45,246: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 20:08:45,376: INFO: main Starting Data Ingestion Stage...
+[2024-10-25 20:08:45,377: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 20:08:45,377: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 20:08:45,377: INFO: common Created directory: artifacts
+[2024-10-25 20:08:45,377: ERROR: main Data Ingestion Stage failed with error: 'ConfigurationManager' object has no attribute 'get_config'
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_01_data_ingestion.py", line 19, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_01_data_ingestion.py", line 13, in main
+    data_ingestion_config = config_manager.get_config('data_ingestion')
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigurationManager' object has no attribute 'get_config'
+[2024-10-25 20:09:01,984: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 20:09:02,110: INFO: main Starting Data Ingestion Stage...
+[2024-10-25 20:09:02,111: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 20:09:02,112: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 20:09:02,112: INFO: common Created directory: artifacts
+[2024-10-25 20:09:02,112: INFO: common Created directory: artifacts/data_ingestion
+[2024-10-25 20:09:02,112: INFO: data_ingestion File already exists with size: 8076 KB
+[2024-10-25 20:09:02,223: INFO: main Data Ingestion Stage completed successfully.
+[2024-10-25 20:09:26,975: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 20:09:27,104: INFO: main Starting Data Ingestion Stage...
+[2024-10-25 20:09:27,105: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 20:09:27,106: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 20:09:27,106: INFO: common Created directory: artifacts
+[2024-10-25 20:09:27,106: INFO: common Created directory: artifacts/data_validation
+[2024-10-25 20:09:27,107: INFO: main Data Ingestion Stage completed successfully.
+[2024-10-25 20:09:34,960: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 20:09:35,087: INFO: main Starting Data Ingestion Stage...
+[2024-10-25 20:09:35,088: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 20:09:35,088: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 20:09:35,089: INFO: common Created directory: artifacts
+[2024-10-25 20:09:35,089: INFO: common Created directory: artifacts/data_validation
+[2024-10-25 20:09:35,089: ERROR: main Data Ingestion Stage failed with error: name 'data_transformation_config' is not defined
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 14, in main
+    data_transformation = DataTransformation(config=data_transformation_config)
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'data_transformation_config' is not defined. Did you mean: 'data_validation_config'?
+[2024-10-25 20:09:46,748: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 20:09:46,866: INFO: main Starting Data Ingestion Stage...
+[2024-10-25 20:09:46,867: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 20:09:46,868: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 20:09:46,868: INFO: common Created directory: artifacts
+[2024-10-25 20:09:46,868: INFO: common Created directory: artifacts/data_validation
+[2024-10-25 20:09:46,868: ERROR: main Data Ingestion Stage failed with error: 'DataValidationConfig' object has no attribute 'tokenizer_name'
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 14, in main
+    data_transformation = DataTransformation(config=data_transformation_config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/components/data_transformation.py", line 9, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_name)
+                                                   ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataValidationConfig' object has no attribute 'tokenizer_name'
+[2024-10-25 20:10:06,328: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 20:10:06,443: INFO: main Starting Data Transformation Stage...
+[2024-10-25 20:10:06,444: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 20:10:06,444: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 20:10:06,444: INFO: common Created directory: artifacts
+[2024-10-25 20:10:06,444: INFO: common Created directory: artifacts/data_validation
+[2024-10-25 20:10:06,444: ERROR: main Data Transformation Stage failed with error: 'DataValidationConfig' object has no attribute 'tokenizer_name'
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 14, in main
+    data_transformation = DataTransformation(config=data_transformation_config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/components/data_transformation.py", line 9, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_name)
+                                                   ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataValidationConfig' object has no attribute 'tokenizer_name'
+[2024-10-25 20:10:21,734: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 20:10:21,842: INFO: main Starting Data Transformation Stage...
+[2024-10-25 20:10:21,842: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 20:10:21,843: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 20:10:21,843: INFO: common Created directory: artifacts
+[2024-10-25 20:10:21,843: INFO: common Created directory: artifacts/data_transformation
+[2024-10-25 20:10:22,604: ERROR: main Data Transformation Stage failed with error: Directory artifacts/data_ingestion/samsum_dataset not found
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 15, in main
+    data_transformation.convert()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/components/data_transformation.py", line 24, in convert
+    dataset_samsum=load_from_disk(self.config.data_path)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/datasets/load.py", line 2152, in load_from_disk
+    raise FileNotFoundError(f"Directory {dataset_path} not found")
+FileNotFoundError: Directory artifacts/data_ingestion/samsum_dataset not found
+[2024-10-25 20:10:37,411: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 20:10:37,511: INFO: main Starting Data Transformation Stage...
+[2024-10-25 20:10:37,512: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 20:10:37,512: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 20:10:37,512: INFO: common Created directory: artifacts
+[2024-10-25 20:10:37,512: INFO: common Created directory: artifacts/data_transformation
+[2024-10-25 20:10:38,178: ERROR: main Data Transformation Stage failed with error: Directory artifacts/data_ingestion/samsum-dataset is neither a `Dataset` directory nor a `DatasetDict` directory.
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 13, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_03_data_transformation.py", line 15, in main
+    data_transformation.convert()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/components/data_transformation.py", line 24, in convert
+    dataset_samsum=load_from_disk(self.config.data_path)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/datasets/load.py", line 2160, in load_from_disk
+    raise FileNotFoundError(
+FileNotFoundError: Directory artifacts/data_ingestion/samsum-dataset is neither a `Dataset` directory nor a `DatasetDict` directory.
+[2024-10-25 20:10:55,934: INFO: config PyTorch version 2.4.1 available.
+[2024-10-25 20:10:56,033: INFO: main Starting Data Transformation Stage...
+[2024-10-25 20:10:56,034: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-25 20:10:56,034: INFO: common Successfully read YAML file from params.yaml
+[2024-10-25 20:10:56,034: INFO: common Created directory: artifacts
+[2024-10-25 20:10:56,034: INFO: common Created directory: artifacts/data_transformation
+[2024-10-25 20:10:59,616: INFO: main Data Transformation Stage completed successfully.
+[2024-10-27 21:27:06,712: INFO: config PyTorch version 2.4.1 available.
+[2024-10-27 21:27:26,905: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-27 21:27:26,910: INFO: common Successfully read YAML file from params.yaml
+[2024-10-27 21:27:26,911: INFO: common Created directory: artifacts
+[2024-10-27 21:28:00,361: INFO: config PyTorch version 2.4.1 available.
+[2024-10-27 21:28:00,652: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-27 21:28:00,658: INFO: common Successfully read YAML file from params.yaml
+[2024-10-27 21:28:00,660: INFO: common Created directory: artifacts
+[2024-10-27 21:28:00,662: INFO: common Created directory: artifacts/model_trainer
+[2024-10-27 21:28:46,232: INFO: config PyTorch version 2.4.1 available.
+[2024-10-27 21:28:46,417: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-27 21:28:46,419: INFO: common Successfully read YAML file from params.yaml
+[2024-10-27 21:28:46,419: INFO: common Created directory: artifacts
+[2024-10-27 21:28:46,419: INFO: common Created directory: artifacts/model_trainer
+[2024-10-27 21:29:14,098: WARNING: file_download Error while downloading from https://cdn-lfs.hf.co/google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1730312932&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMDMxMjkzMn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU%7EcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=MEIy4GhKnvoECcU1MdEnWx%7EG5-BElKXoxkCCiMBtyJtJ-Mg1pXT%7EWBDiu8Tz2owactmZaz-M9IpNJBkiSwKRqxA6k6iGbLZEvi1ipK1LNrHjCcD7bcGcBaPYj7kObT1Q75C7ozshfU3IN5i6vqLCxvUslCPbTL8j9YLUZK-0hIcqW-W%7EBzfWKSoecaGNUsK1xKwqjEAguFH73F2lsJIV9hBuqhQghvZYKsBKPr2gasloe2gD5GfCs7mHSHOyy2Z%7EaURM91uQX2jDrv-TClUetq9I5CDXPOnGEeUsyZWMdkP2AsM5mlQ93aGx68T9o%7Er6O6s2PYtUk6ZkNYMcgez7SA__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+[2024-10-27 21:35:48,499: INFO: config PyTorch version 2.4.1 available.
+[2024-10-27 21:35:49,034: INFO: main Starting Model Training Stage...
+[2024-10-27 21:35:49,035: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-27 21:35:49,036: INFO: common Successfully read YAML file from params.yaml
+[2024-10-27 21:35:49,036: INFO: common Created directory: artifacts
+[2024-10-27 21:35:49,036: ERROR: main Model Training Stage failed with error: "'ConfigBox' object has no attribute 'model_training'"
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'model_training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'model_training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'model_training'. Did you mean: 'model_trainer'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'model_training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'model_training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'model_training'. Did you mean: 'model_trainer'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 14, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 13, in main
+    data_transformation_config = config_manager.get_config('model_training')
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/config/configuration.py", line 15, in get_config
+    config = getattr(self.config, config_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_training'". Did you mean: 'model_trainer'?
+[2024-10-27 21:36:59,818: INFO: config PyTorch version 2.4.1 available.
+[2024-10-27 21:37:01,683: INFO: main Starting Model Training Stage...
+[2024-10-27 21:37:01,684: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-27 21:37:01,686: INFO: common Successfully read YAML file from params.yaml
+[2024-10-27 21:37:01,687: INFO: common Created directory: artifacts
+[2024-10-27 21:37:01,687: ERROR: main Model Training Stage failed with error: "'ConfigBox' object has no attribute 'model_training'"
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'model_training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'model_training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'model_training'. Did you mean: 'model_trainer'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'model_training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'model_training'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'model_training'. Did you mean: 'model_trainer'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 14, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 13, in main
+    data_transformation_config = config_manager.get_config('model_training')
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/config/configuration.py", line 15, in get_config
+    config = getattr(self.config, config_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_training'". Did you mean: 'model_trainer'?
+[2024-10-27 21:37:23,760: INFO: config PyTorch version 2.4.1 available.
+[2024-10-27 21:37:24,294: INFO: main Starting Model Training Stage...
+[2024-10-27 21:37:24,295: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-27 21:37:24,296: INFO: common Successfully read YAML file from params.yaml
+[2024-10-27 21:37:24,296: INFO: common Created directory: artifacts
+[2024-10-27 21:37:24,296: INFO: common Created directory: artifacts/model_trainer
+[2024-10-27 21:37:24,296: ERROR: main Model Training Stage failed with error: "'ConfigBox' object has no attribute 'num_train_epochs'"
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'num_train_epochs'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'num_train_epochs'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'num_train_epochs'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'num_train_epochs'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'num_train_epochs'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'num_train_epochs'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'num_train_epochs'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 14, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 13, in main
+    data_transformation_config = config_manager.get_config('model_training')
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/config/configuration.py", line 46, in get_config
+    num_train_epochs = self.params.num_train_epochs,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'num_train_epochs'"
+[2024-10-27 21:38:52,844: INFO: config PyTorch version 2.4.1 available.
+[2024-10-27 21:38:53,350: INFO: main Starting Model Training Stage...
+[2024-10-27 21:38:53,351: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-27 21:38:53,352: INFO: common Successfully read YAML file from params.yaml
+[2024-10-27 21:38:53,352: INFO: common Created directory: artifacts
+[2024-10-27 21:38:53,352: INFO: common Created directory: artifacts/model_trainer
+[2024-10-27 21:38:53,352: ERROR: main Model Training Stage failed with error: "'ConfigBox' object has no attribute 'num_train_epochs'"
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'num_train_epochs'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'num_train_epochs'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'num_train_epochs'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'num_train_epochs'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'num_train_epochs'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'num_train_epochs'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'num_train_epochs'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 14, in <module>
+    data_stage.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 13, in main
+    data_transformation_config = config_manager.get_config('model_training')
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/config/configuration.py", line 47, in get_config
+    num_train_epochs = self.params.num_train_epochs,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/box/box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'num_train_epochs'"
+[2024-10-27 21:41:59,546: INFO: config PyTorch version 2.4.1 available.
+[2024-10-27 21:42:00,022: INFO: main Starting Model Training Stage...
+[2024-10-27 21:42:00,023: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-27 21:42:00,024: INFO: common Successfully read YAML file from params.yaml
+[2024-10-27 21:42:00,024: INFO: common Created directory: artifacts
+[2024-10-27 21:42:00,024: INFO: common Created directory: artifacts/model_trainer
+[2024-10-31 14:26:44,699: INFO: config PyTorch version 2.4.1 available.
+[2024-10-31 14:27:07,536: INFO: config PyTorch version 2.4.1 available.
+[2024-10-31 14:28:58,395: INFO: config PyTorch version 2.4.1 available.
+[2024-10-31 14:28:58,907: INFO: main >>>>>> stage Data Ingestion stage started <<<<<<
+[2024-10-31 14:28:58,909: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:28:58,910: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:28:58,910: INFO: common Created directory: artifacts
+[2024-10-31 14:28:58,910: INFO: common Created directory: artifacts/data_ingestion
+[2024-10-31 14:28:58,910: INFO: data_ingestion File already exists with size: 8076 KB
+[2024-10-31 14:28:59,013: INFO: main >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2024-10-31 14:28:59,013: INFO: main >>>>>> stage Data Validation stage started <<<<<<
+[2024-10-31 14:28:59,015: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:28:59,015: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:28:59,015: INFO: common Created directory: artifacts
+[2024-10-31 14:28:59,015: INFO: common Created directory: artifacts/data_validation
+[2024-10-31 14:28:59,025: INFO: main >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2024-10-31 14:28:59,025: INFO: main >>>>>> stage Data Transformation stage started <<<<<<
+[2024-10-31 14:28:59,026: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:28:59,027: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:28:59,027: INFO: common Created directory: artifacts
+[2024-10-31 14:28:59,027: INFO: common Created directory: artifacts/data_transformation
+[2024-10-31 14:29:00,399: INFO: main >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[2024-10-31 14:29:00,399: INFO: main *******************
+[2024-10-31 14:29:00,399: INFO: main >>>>>> stage Model Trainer stage started <<<<<<
+[2024-10-31 14:29:00,400: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:29:00,401: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:29:00,401: INFO: common Created directory: artifacts
+[2024-10-31 14:29:00,401: INFO: common Created directory: artifacts/model_trainer
+[2024-10-31 14:36:51,749: WARNING: file_download Error while downloading from https://cdn-lfs.hf.co/google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1730633343&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMDYzMzM0M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU%7EcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=f75t2-vndXvIFQQPTSd4F-3IBXbjZA5dX7xYvJyCwYo75KnC0HneL%7EwWqnPfnK53Q9wWGpp0Ug3tgpJsJGAgXSeWvazi1ZXhmVKACHwNBYP4DbZ9Ef0ae9pbacgWxTC6kgoASJD0sfmlFzrYxHx8QccLYUeXGszrhxv7nd4NbDwYzFhonuCutZ8M8zsBWyBG4GyEfBMLbwDSX-pqMbftZPO1B8JgHQng6FF5cBu--cJ8nLaJ00QYkk6NqALCRy0ZhR3o8eR5ml2oNGkmJLCkAkjKtN2RP0d2UG6rbXU87SrSMlc4EYJzvk09Nut928JnRnOuKN1bLfroFmiX1OvSog__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+[2024-10-31 14:36:52,759: ERROR: main (MaxRetryError('HTTPSConnectionPool(host=\'cdn-lfs.hf.co\', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1730633343&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMDYzMzM0M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=f75t2-vndXvIFQQPTSd4F-3IBXbjZA5dX7xYvJyCwYo75KnC0HneL~wWqnPfnK53Q9wWGpp0Ug3tgpJsJGAgXSeWvazi1ZXhmVKACHwNBYP4DbZ9Ef0ae9pbacgWxTC6kgoASJD0sfmlFzrYxHx8QccLYUeXGszrhxv7nd4NbDwYzFhonuCutZ8M8zsBWyBG4GyEfBMLbwDSX-pqMbftZPO1B8JgHQng6FF5cBu--cJ8nLaJ00QYkk6NqALCRy0ZhR3o8eR5ml2oNGkmJLCkAkjKtN2RP0d2UG6rbXU87SrSMlc4EYJzvk09Nut928JnRnOuKN1bLfroFmiX1OvSog__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x173da1c70>: Failed to resolve \'cdn-lfs.hf.co\' ([Errno 8] nodename nor servname provided, or not known)"))'), '(Request ID: 10e733e3-72e4-47ba-ae2a-7830fbe1d717)')
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 748, in _error_catcher
+    yield
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 873, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 856, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 472, in read
+    s = self.fp.read(amt)
+        ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1249, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1105, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 1060, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 949, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 872, in _raw_read
+    with self._error_catcher():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 753, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/requests/models.py", line 826, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 693, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 206, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x173da1c70>: Failed to resolve 'cdn-lfs.hf.co' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1730633343&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMDYzMzM0M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=f75t2-vndXvIFQQPTSd4F-3IBXbjZA5dX7xYvJyCwYo75KnC0HneL~wWqnPfnK53Q9wWGpp0Ug3tgpJsJGAgXSeWvazi1ZXhmVKACHwNBYP4DbZ9Ef0ae9pbacgWxTC6kgoASJD0sfmlFzrYxHx8QccLYUeXGszrhxv7nd4NbDwYzFhonuCutZ8M8zsBWyBG4GyEfBMLbwDSX-pqMbftZPO1B8JgHQng6FF5cBu--cJ8nLaJ00QYkk6NqALCRy0ZhR3o8eR5ml2oNGkmJLCkAkjKtN2RP0d2UG6rbXU87SrSMlc4EYJzvk09Nut928JnRnOuKN1bLfroFmiX1OvSog__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x173da1c70>: Failed to resolve 'cdn-lfs.hf.co' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 51, in <module>
+    model_trainer.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 15, in main
+    data_transformation.train()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/components/model_trainer.py", line 16, in train
+    model_pegasus = AutoModelForSeq2SeqLM.from_pretrained(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/transformers/modeling_utils.py", line 3837, in from_pretrained
+    resolved_archive_file = cached_file(
+                            ^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1232, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1381, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1915, in _download_to_tmp_and_move
+    http_get(
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 558, in http_get
+    return http_get(
+           ^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 455, in http_get
+    r = _request_wrapper(
+        ^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 387, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 93, in send
+    return super().send(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: (MaxRetryError('HTTPSConnectionPool(host=\'cdn-lfs.hf.co\', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1730633343&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMDYzMzM0M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=f75t2-vndXvIFQQPTSd4F-3IBXbjZA5dX7xYvJyCwYo75KnC0HneL~wWqnPfnK53Q9wWGpp0Ug3tgpJsJGAgXSeWvazi1ZXhmVKACHwNBYP4DbZ9Ef0ae9pbacgWxTC6kgoASJD0sfmlFzrYxHx8QccLYUeXGszrhxv7nd4NbDwYzFhonuCutZ8M8zsBWyBG4GyEfBMLbwDSX-pqMbftZPO1B8JgHQng6FF5cBu--cJ8nLaJ00QYkk6NqALCRy0ZhR3o8eR5ml2oNGkmJLCkAkjKtN2RP0d2UG6rbXU87SrSMlc4EYJzvk09Nut928JnRnOuKN1bLfroFmiX1OvSog__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x173da1c70>: Failed to resolve \'cdn-lfs.hf.co\' ([Errno 8] nodename nor servname provided, or not known)"))'), '(Request ID: 10e733e3-72e4-47ba-ae2a-7830fbe1d717)')
+[2024-10-31 14:36:57,689: INFO: config PyTorch version 2.4.1 available.
+[2024-10-31 14:36:58,183: INFO: main >>>>>> stage Data Ingestion stage started <<<<<<
+[2024-10-31 14:36:58,185: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:36:58,185: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:36:58,185: INFO: common Created directory: artifacts
+[2024-10-31 14:36:58,185: INFO: common Created directory: artifacts/data_ingestion
+[2024-10-31 14:36:58,185: INFO: data_ingestion File already exists with size: 8076 KB
+[2024-10-31 14:36:58,302: INFO: main >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2024-10-31 14:36:58,302: INFO: main >>>>>> stage Data Validation stage started <<<<<<
+[2024-10-31 14:36:58,303: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:36:58,304: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:36:58,304: INFO: common Created directory: artifacts
+[2024-10-31 14:36:58,304: INFO: common Created directory: artifacts/data_validation
+[2024-10-31 14:36:58,304: INFO: main >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2024-10-31 14:36:58,304: INFO: main >>>>>> stage Data Transformation stage started <<<<<<
+[2024-10-31 14:36:58,305: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:36:58,306: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:36:58,306: INFO: common Created directory: artifacts
+[2024-10-31 14:36:58,306: INFO: common Created directory: artifacts/data_transformation
+[2024-10-31 14:36:59,804: INFO: main >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[2024-10-31 14:36:59,805: INFO: main *******************
+[2024-10-31 14:36:59,805: INFO: main >>>>>> stage Model Trainer stage started <<<<<<
+[2024-10-31 14:36:59,806: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:36:59,806: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:36:59,806: INFO: common Created directory: artifacts
+[2024-10-31 14:36:59,807: INFO: common Created directory: artifacts/model_trainer
+[2024-10-31 14:40:13,670: WARNING: file_download Error while downloading from https://cdn-lfs.hf.co/google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1730633822&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMDYzMzgyMn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU%7EcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=WjrKqp%7E7FzbrmGIsfUUZ51P8A9tpscptMD8mFvU-VFzFQLXeJ-pU65WzWPxjpBxYRoGnQOk8rnfHKRu8T2JjNM6VYeBBo7zzKD2LLA2zs-rC95qocJP8QrzwUQWG62ks6nF4-UaGs3K7FRdxgyyd0vfwbRq0ARAzfDVu8STHPXWs3xy2nq8DioKyUNOKQIdCYsnVhGdcDl0LfTvQcO4kDOltKdU3jUSZ%7EGFUW57YtuOJ7XGVPrjtO9u24t-xXoveGXGHQj9m7gmPc2gSmZbe6yR12O-kZyb09W40ubwifUJsdFcBUjQQYt3Mke6T5g2--dkYGw%7Eh-6AO1TRWCqvucA__&Key-Pair-Id=K3RPWS32NSSJCE: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+Trying to resume download...
+[2024-10-31 14:40:14,688: ERROR: main (MaxRetryError('HTTPSConnectionPool(host=\'cdn-lfs.hf.co\', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1730633822&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMDYzMzgyMn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=WjrKqp~7FzbrmGIsfUUZ51P8A9tpscptMD8mFvU-VFzFQLXeJ-pU65WzWPxjpBxYRoGnQOk8rnfHKRu8T2JjNM6VYeBBo7zzKD2LLA2zs-rC95qocJP8QrzwUQWG62ks6nF4-UaGs3K7FRdxgyyd0vfwbRq0ARAzfDVu8STHPXWs3xy2nq8DioKyUNOKQIdCYsnVhGdcDl0LfTvQcO4kDOltKdU3jUSZ~GFUW57YtuOJ7XGVPrjtO9u24t-xXoveGXGHQj9m7gmPc2gSmZbe6yR12O-kZyb09W40ubwifUJsdFcBUjQQYt3Mke6T5g2--dkYGw~h-6AO1TRWCqvucA__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x16bc9b4a0>: Failed to resolve \'cdn-lfs.hf.co\' ([Errno 8] nodename nor servname provided, or not known)"))'), '(Request ID: f4fbc12b-5d94-40ad-98de-1814eded2037)')
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 748, in _error_catcher
+    yield
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 873, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 856, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 472, in read
+    s = self.fp.read(amt)
+        ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1249, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/ssl.py", line 1105, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/requests/models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 1060, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 949, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 872, in _raw_read
+    with self._error_catcher():
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 155, in __exit__
+    self.gen.throw(value)
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/response.py", line 753, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/requests/models.py", line 826, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 693, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 206, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x16bc9b4a0>: Failed to resolve 'cdn-lfs.hf.co' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs.hf.co', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1730633822&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMDYzMzgyMn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=WjrKqp~7FzbrmGIsfUUZ51P8A9tpscptMD8mFvU-VFzFQLXeJ-pU65WzWPxjpBxYRoGnQOk8rnfHKRu8T2JjNM6VYeBBo7zzKD2LLA2zs-rC95qocJP8QrzwUQWG62ks6nF4-UaGs3K7FRdxgyyd0vfwbRq0ARAzfDVu8STHPXWs3xy2nq8DioKyUNOKQIdCYsnVhGdcDl0LfTvQcO4kDOltKdU3jUSZ~GFUW57YtuOJ7XGVPrjtO9u24t-xXoveGXGHQj9m7gmPc2gSmZbe6yR12O-kZyb09W40ubwifUJsdFcBUjQQYt3Mke6T5g2--dkYGw~h-6AO1TRWCqvucA__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x16bc9b4a0>: Failed to resolve 'cdn-lfs.hf.co' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 51, in <module>
+    model_trainer.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 15, in main
+    data_transformation.train()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/components/model_trainer.py", line 16, in train
+    model_pegasus = AutoModelForSeq2SeqLM.from_pretrained(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/transformers/modeling_utils.py", line 3837, in from_pretrained
+    resolved_archive_file = cached_file(
+                            ^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1232, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1381, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1915, in _download_to_tmp_and_move
+    http_get(
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 558, in http_get
+    return http_get(
+           ^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 455, in http_get
+    r = _request_wrapper(
+        ^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 387, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 93, in send
+    return super().send(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: (MaxRetryError('HTTPSConnectionPool(host=\'cdn-lfs.hf.co\', port=443): Max retries exceeded with url: /google/pegasus-cnn_dailymail/cf34e28157605d3ced3bd184820ea2a9d9a30b69f4bb1df4aaa4145d0850290e?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1730633822&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMDYzMzgyMn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9nb29nbGUvcGVnYXN1cy1jbm5fZGFpbHltYWlsL2NmMzRlMjgxNTc2MDVkM2NlZDNiZDE4NDgyMGVhMmE5ZDlhMzBiNjlmNGJiMWRmNGFhYTQxNDVkMDg1MDI5MGU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=WjrKqp~7FzbrmGIsfUUZ51P8A9tpscptMD8mFvU-VFzFQLXeJ-pU65WzWPxjpBxYRoGnQOk8rnfHKRu8T2JjNM6VYeBBo7zzKD2LLA2zs-rC95qocJP8QrzwUQWG62ks6nF4-UaGs3K7FRdxgyyd0vfwbRq0ARAzfDVu8STHPXWs3xy2nq8DioKyUNOKQIdCYsnVhGdcDl0LfTvQcO4kDOltKdU3jUSZ~GFUW57YtuOJ7XGVPrjtO9u24t-xXoveGXGHQj9m7gmPc2gSmZbe6yR12O-kZyb09W40ubwifUJsdFcBUjQQYt3Mke6T5g2--dkYGw~h-6AO1TRWCqvucA__&Key-Pair-Id=K3RPWS32NSSJCE (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x16bc9b4a0>: Failed to resolve \'cdn-lfs.hf.co\' ([Errno 8] nodename nor servname provided, or not known)"))'), '(Request ID: f4fbc12b-5d94-40ad-98de-1814eded2037)')
+[2024-10-31 14:43:45,373: INFO: config PyTorch version 2.4.1 available.
+[2024-10-31 14:43:45,887: INFO: main >>>>>> stage Data Ingestion stage started <<<<<<
+[2024-10-31 14:43:45,889: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:43:45,889: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:43:45,889: INFO: common Created directory: artifacts
+[2024-10-31 14:43:45,890: INFO: common Created directory: artifacts/data_ingestion
+[2024-10-31 14:43:45,890: INFO: data_ingestion File already exists with size: 8076 KB
+[2024-10-31 14:43:46,027: INFO: main >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2024-10-31 14:43:46,028: INFO: main >>>>>> stage Data Validation stage started <<<<<<
+[2024-10-31 14:43:46,029: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:43:46,029: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:43:46,029: INFO: common Created directory: artifacts
+[2024-10-31 14:43:46,029: INFO: common Created directory: artifacts/data_validation
+[2024-10-31 14:43:46,030: INFO: main >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2024-10-31 14:43:46,030: INFO: main >>>>>> stage Data Transformation stage started <<<<<<
+[2024-10-31 14:43:46,031: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:43:46,031: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:43:46,031: INFO: common Created directory: artifacts
+[2024-10-31 14:43:46,031: INFO: common Created directory: artifacts/data_transformation
+[2024-10-31 14:43:46,715: INFO: main >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[2024-10-31 14:43:46,715: INFO: main *******************
+[2024-10-31 14:43:46,715: INFO: main >>>>>> stage Model Trainer stage started <<<<<<
+[2024-10-31 14:43:46,717: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:43:46,717: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:43:46,717: INFO: common Created directory: artifacts
+[2024-10-31 14:43:46,717: INFO: common Created directory: artifacts/model_trainer
+[2024-10-31 14:43:47,155: ERROR: main google/pegasus-cnn_dailymail does not appear to have a file named pytorch_model.bin, model.safetensors, tf_model.h5, model.ckpt or flax_model.msgpack.
+Traceback (most recent call last):
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/main.py", line 51, in <module>
+    model_trainer.main()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 18, in main
+    raise e
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/pipeline/stage_04_model_training.py", line 15, in main
+    data_transformation.train()
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/src/textSummarizer/components/model_trainer.py", line 16, in train
+    model_pegasus = AutoModelForSeq2SeqLM.from_pretrained(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huseyin/Documents/deep-learning/end-to-end-nlp/.venv/lib/python3.12/site-packages/transformers/modeling_utils.py", line 3912, in from_pretrained
+    raise EnvironmentError(
+OSError: google/pegasus-cnn_dailymail does not appear to have a file named pytorch_model.bin, model.safetensors, tf_model.h5, model.ckpt or flax_model.msgpack.
+[2024-10-31 14:44:53,047: INFO: config PyTorch version 2.4.1 available.
+[2024-10-31 14:44:53,552: INFO: main >>>>>> stage Data Ingestion stage started <<<<<<
+[2024-10-31 14:44:53,554: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:44:53,554: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:44:53,554: INFO: common Created directory: artifacts
+[2024-10-31 14:44:53,554: INFO: common Created directory: artifacts/data_ingestion
+[2024-10-31 14:44:53,554: INFO: data_ingestion File already exists with size: 8076 KB
+[2024-10-31 14:44:53,674: INFO: main >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2024-10-31 14:44:53,674: INFO: main >>>>>> stage Data Validation stage started <<<<<<
+[2024-10-31 14:44:53,675: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:44:53,675: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:44:53,675: INFO: common Created directory: artifacts
+[2024-10-31 14:44:53,675: INFO: common Created directory: artifacts/data_validation
+[2024-10-31 14:44:53,678: INFO: main >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2024-10-31 14:44:53,678: INFO: main >>>>>> stage Data Transformation stage started <<<<<<
+[2024-10-31 14:44:53,679: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:44:53,680: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:44:53,680: INFO: common Created directory: artifacts
+[2024-10-31 14:44:53,680: INFO: common Created directory: artifacts/data_transformation
+[2024-10-31 14:44:54,949: INFO: main >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[2024-10-31 14:44:54,949: INFO: main *******************
+[2024-10-31 14:44:54,949: INFO: main >>>>>> stage Model Trainer stage started <<<<<<
+[2024-10-31 14:44:54,951: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 14:44:54,951: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 14:44:54,951: INFO: common Created directory: artifacts
+[2024-10-31 14:44:54,951: INFO: common Created directory: artifacts/model_trainer
+[2024-10-31 20:15:23,516: INFO: config PyTorch version 2.4.1 available.
+[2024-10-31 20:15:24,057: INFO: main >>>>>> stage Data Ingestion stage started <<<<<<
+[2024-10-31 20:15:24,059: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 20:15:24,060: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 20:15:24,060: INFO: common Created directory: artifacts
+[2024-10-31 20:15:24,060: INFO: common Created directory: artifacts/data_ingestion
+[2024-10-31 20:15:24,060: INFO: data_ingestion File already exists with size: 8076 KB
+[2024-10-31 20:15:24,172: INFO: main >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2024-10-31 20:15:24,172: INFO: main >>>>>> stage Data Validation stage started <<<<<<
+[2024-10-31 20:15:24,173: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 20:15:24,173: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 20:15:24,173: INFO: common Created directory: artifacts
+[2024-10-31 20:15:24,173: INFO: common Created directory: artifacts/data_validation
+[2024-10-31 20:15:24,176: INFO: main >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x
+[2024-10-31 20:15:24,176: INFO: main >>>>>> stage Data Transformation stage started <<<<<<
+[2024-10-31 20:15:24,177: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 20:15:24,178: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 20:15:24,178: INFO: common Created directory: artifacts
+[2024-10-31 20:15:24,178: INFO: common Created directory: artifacts/data_transformation
+[2024-10-31 20:15:26,952: INFO: main >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x
+[2024-10-31 20:15:26,953: INFO: main *******************
+[2024-10-31 20:15:26,953: INFO: main >>>>>> stage Model Trainer stage started <<<<<<
+[2024-10-31 20:15:26,954: INFO: common Successfully read YAML file from config/config.yaml
+[2024-10-31 20:15:26,954: INFO: common Successfully read YAML file from params.yaml
+[2024-10-31 20:15:26,954: INFO: common Created directory: artifacts
+[2024-10-31 20:15:26,954: INFO: common Created directory: artifacts/model_trainer
